@@ -46,17 +46,17 @@
 # 截取字符串中文传参
 ```js
   //截取字符串中文传参
-	function getUrlVal(key) { 
-		// 获取参数 
-		var url = window.location.search; 
-		// 正则筛选地址栏 
-		var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)"); 
-		// 匹配目标参数 
-		var result = url.substr(1).match(reg); 
-		//返回参数值 
-		return result ? decodeURIComponent(result[2]) : null; 
-	}
-	//id与name
+  function getUrlVal(key) { 
+     // 获取参数 
+     var url = window.location.search; 
+     // 正则筛选地址栏 
+     var reg = new RegExp("(^|&)" + key + "=([^&]*)(&|$)"); 
+     // 匹配目标参数 
+     var result = url.substr(1).match(reg); 
+     //返回参数值 
+     return result ? decodeURIComponent(result[2]) : null; 
+  }
+  //id与name
   var ID = getUrlVal("id");
   var Name = getUrlVal("name"); 
   //例子: www.baidu.com/?id=1&name=jack  ---> 1  jack
